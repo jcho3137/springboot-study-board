@@ -42,11 +42,7 @@ public class ReplyController {
     @PutMapping("/{rno}")
     public ResponseEntity<String> modify(@RequestBody ReplyDTO replyDTO) {
         log.info(replyDTO);
-
         replyService.modify(replyDTO);
-
-        String str = "";
-
         return new ResponseEntity<>("success", HttpStatus.OK);
     }
 }
